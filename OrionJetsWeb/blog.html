@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Jets Aviation Blog - Insights & News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-deep-space-blue text-light-gray">
+    <div id="preloader"><div class="spinner"></div><p class="preloader-text">LOADING INSIGHTS...</p></div>
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-white">Orion<span class="text-accent-blue">Jets</span></a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="nav-item text-gray-300">Home</a>
+                <a href="aircraft_listings.html" class="nav-item text-gray-300">Aircraft</a>
+                <a href="about.html" class="nav-item text-gray-300">About Us</a>
+                <a href="services.html" class="nav-item text-gray-300">Services</a>
+                <a href="blog.html" class="nav-item text-gray-300 active">Blog</a>
+                <a href="contact.html" class="nav-item text-gray-300">Contact</a>
+                <a href="aircraft_listings.html" class="btn-secondary px-5 py-2 rounded-lg text-sm font-semibold">Find Your Jet</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <a href="index.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Aircraft</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="blog.html" class="block py-3 px-6 text-accent-blue-light bg-gray-700">Blog</a>
+            <a href="contact.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Contact</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light hover:bg-gray-700">Find Your Jet</a>
+        </div>
+    </nav>
+
+    <header class="page-header-section pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-900 text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 hero-text-animate h1">Orion Jets Aviation Blog</h1>
+            <p class="text-lg md:text-xl text-gray-300 hero-text-animate p">Your Source for Aviation News, Insights, and Luxury Travel.</p>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2">
+                    <article class="glassmorphism rounded-xl overflow-hidden shadow-2xl mb-10 scroll-animation card-hover-effect">
+                        <img src="images/blog1.jpg" alt="Future of Private Aviation" class="w-full h-auto object-cover">
+                        <div class="p-6 md:p-8">
+                            <p class="text-accent-blue-light text-sm font-semibold mb-2">INDUSTRY TRENDS | MAY 15, 2025</p>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 hover:text-accent-blue transition-colors">
+                                <a href="blog_single_post.html?post=future-of-aviation">The Future of Private Aviation: Sustainability and Technology</a>
+                            </h2>
+                            <p class="text-gray-400 leading-relaxed mb-6">
+                                Private aviation is on the cusp of a significant transformation. Driven by environmental concerns and rapid technological advancements, the industry is moving towards a more sustainable and efficient future. Explore the latest innovations in electric aircraft, sustainable aviation fuels (SAFs), and AI-driven flight optimization that are reshaping how we fly...
+                            </p>
+                            
+                        </div>
+                    </article>
+
+                    <article class="glassmorphism rounded-xl overflow-hidden shadow-2xl mb-10 scroll-animation card-hover-effect" style="transition-delay: 0.1s;">
+                        <img src="images/blog2.jpg" alt="Choosing Your First Jet" class="w-full h-auto object-cover">
+                        <div class="p-6 md:p-8">
+                            <p class="text-accent-blue-light text-sm font-semibold mb-2">BUYER'S GUIDE | APRIL 28, 2025</p>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 hover:text-accent-blue transition-colors">
+                                <a href="blog_single_post.html?post=choosing-first-jet">Navigating the Skies: A Guide to Choosing Your First Private Jet</a>
+                            </h2>
+                            <p class="text-gray-400 leading-relaxed mb-6">
+                                Purchasing your first private jet is an exhilarating milestone. However, the process can seem daunting with numerous factors to consider. From understanding your travel needs and budget to evaluating aircraft types, range, and operational costs, this guide provides essential insights to help you make an informed decision...
+                            </p>
+                        
+                        </div>
+                    </article>
+
+                    <article class="glassmorphism rounded-xl overflow-hidden shadow-2xl mb-10 scroll-animation card-hover-effect" style="transition-delay: 0.2s;">
+                        <img src="images/blog3.jpeg" alt="Luxury Destinations by Private Jet" class="w-full h-auto object-cover">
+                        <div class="p-6 md:p-8">
+                            <p class="text-accent-blue-light text-sm font-semibold mb-2">TRAVEL & LIFESTYLE | APRIL 10, 2025</p>
+                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 hover:text-accent-blue transition-colors">
+                                <a href="blog_single_post.html?post=luxury-destinations">Top 5 Luxury Destinations Best Reached by Private Jet in Southeast Asia</a>
+                            </h2>
+                            <p class="text-gray-400 leading-relaxed mb-6">
+                                Experience unparalleled freedom and luxury by exploring Southeast Asia's most exclusive destinations. Private jet travel opens up a world of remote islands, secluded resorts, and vibrant cultural hubs, all accessible on your schedule. Discover our top picks for an unforgettable journey...
+                            </p>
+                        </div>
+                    </article>
+
+                    <div class="text-center mt-12 scroll-animation" style="transition-delay: 0.3s;">
+                        
+                    </div>
+                </div>
+
+                <aside class="lg:col-span-1 space-y-10">
+                    <div class="glassmorphism p-6 rounded-xl shadow-xl scroll-animation" style="transition-delay: 0.1s;">
+                        <h3 class="text-xl font-semibold text-white mb-4">Search Blog</h3>
+                        <div class="relative">
+                            <input type="search" placeholder="Keywords..." class="filter-select pr-10">
+                            <button class="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-accent-blue">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-xl shadow-xl scroll-animation" style="transition-delay: 0.2s;">
+                        <h3 class="text-xl font-semibold text-white mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-accent-blue transition-colors flex justify-between"><span>Industry Trends</span> <span class="text-xs bg-slate-700 px-2 py-1 rounded">8</span></a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-accent-blue transition-colors flex justify-between"><span>Buyer's Guides</span> <span class="text-xs bg-slate-700 px-2 py-1 rounded">5</span></a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-accent-blue transition-colors flex justify-between"><span>Travel & Lifestyle</span> <span class="text-xs bg-slate-700 px-2 py-1 rounded">12</span></a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-accent-blue transition-colors flex justify-between"><span>Aircraft Spotlights</span> <span class="text-xs bg-slate-700 px-2 py-1 rounded">7</span></a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-accent-blue transition-colors flex justify-between"><span>Orion Jets News</span> <span class="text-xs bg-slate-700 px-2 py-1 rounded">3</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-xl shadow-xl scroll-animation" style="transition-delay: 0.3s;">
+                        <h3 class="text-xl font-semibold text-white mb-4">Recent Posts</h3>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="blog_single_post.html?post=future-of-aviation" class="group">
+                                    <h4 class="font-medium text-gray-300 group-hover:text-accent-blue transition-colors text-sm">The Future of Private Aviation: Sustainability and Technology</h4>
+                                    <p class="text-xs text-gray-500">May 15, 2025</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog_single_post.html?post=maintenance-tips" class="group">
+                                    <h4 class="font-medium text-gray-300 group-hover:text-accent-blue transition-colors text-sm">Essential Maintenance Tips for Private Jet Owners</h4>
+                                    <p class="text-xs text-gray-500">May 02, 2025</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog_single_post.html?post=choosing-first-jet" class="group">
+                                    <h4 class="font-medium text-gray-300 group-hover:text-accent-blue transition-colors text-sm">Navigating the Skies: A Guide to Choosing Your First Private Jet</h4>
+                                    <p class="text-xs text-gray-500">April 28, 2025</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glassmorphism p-6 rounded-xl shadow-xl scroll-animation text-center" style="transition-delay: 0.4s;">
+                        <i class="fas fa-plane-circle-check text-5xl text-accent-blue mb-4"></i>
+                        <h3 class="text-xl font-semibold text-white mb-2">Ready for Your Next Journey?</h3>
+                        <p class="text-gray-400 mb-4 text-sm">Explore our exclusive fleet or contact our experts today.</p>
+                        <a href="aircraft_listings.html" class="btn-primary w-full font-semibold py-2.5 rounded-lg text-md p-2">View Aircraft</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Orion<span class="text-accent-blue">Jets</span></h4>
+                    <p class="text-gray-400 text-sm">Elevating your aviation experience with bespoke aircraft solutions for the Indonesian market and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent-blue text-sm">Home</a></li>
+                        <li><a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue text-sm">Aircraft Sales</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent-blue text-sm">Our Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent-blue text-sm">About Orion Jets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent-blue text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in luxury aviation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> Orion Jets. All Rights Reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed with passion for the skies.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

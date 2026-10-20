@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Orion Jets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .submission-success-message {
+            display: none; /* Hidden by default */
+            padding: 1rem 1.5rem;
+            background-color: #10B981; /* Tailwind green-500 */
+            color: white;
+            border-radius: 0.5rem; /* rounded-lg */
+            text-align: center;
+            margin-top: 1.5rem; /* mt-6 */
+            animation: fadeInMessage 0.5s ease-out;
+        }
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-deep-space-blue text-light-gray">
+    <div id="preloader"><div class="spinner"></div><p class="preloader-text">LOADING...</p></div>
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-white">Orion<span class="text-accent-blue">Jets</span></a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="nav-item text-gray-300">Home</a>
+                <a href="aircraft_listings.html" class="nav-item text-gray-300">Aircraft</a>
+                <a href="about.html" class="nav-item text-gray-300">About Us</a>
+                <a href="services.html" class="nav-item text-gray-300">Services</a>
+                <a href="blog.html" class="nav-item text-gray-300">Blog</a>
+                <a href="contact.html" class="nav-item text-gray-300 active">Contact</a>
+                <a href="aircraft_listings.html" class="btn-secondary px-5 py-2 rounded-lg text-sm font-semibold">Find Your Jet</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <a href="index.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Aircraft</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="blog.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Blog</a>
+            <a href="contact.html" class="block py-3 px-6 text-accent-blue-light bg-gray-700">Contact</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light hover:bg-gray-700">Find Your Jet</a>
+        </div>
+    </nav>
+
+    <header class="page-header-section pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-900 text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 hero-text-animate h1">Get In Touch</h1>
+            <p class="text-lg md:text-xl text-gray-300 hero-text-animate p">We're here to assist you with all your aviation needs.</p>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="scroll-animation">
+                    <h2 class="text-3xl font-semibold text-white mb-6">Contact Form</h2>
+                    <form id="contactForm" class="glassmorphism p-8 rounded-xl shadow-xl space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-300">Full Name</label>
+                            <input type="text" id="name" name="name" class="filter-select" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email Address</label>
+                            <input type="email" id="email" name="email" class="filter-select" placeholder="you@example.com" required>
+                        </div>
+                         <div>
+                            <label for="subject" class="block mb-2 text-sm font-medium text-gray-300">Subject</label>
+                            <input type="text" id="subject" name="subject" class="filter-select" placeholder="Inquiry about..." required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-300">Message</label>
+                            <textarea id="message" name="message" rows="5" class="filter-select" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full font-semibold py-3 px-5 rounded-lg text-lg">Send Message</button>
+                    </form>
+                    <div id="formSubmissionSuccess" class="submission-success-message">
+                        <i class="fas fa-check-circle mr-2"></i>Thank you for contacting us! We'll be in touch with you soon.
+                    </div>
+                </div>
+                <div class="scroll-animation" style="transition-delay: 0.2s;">
+                    <h2 class="text-3xl font-semibold text-white mb-6">Our Office</h2>
+                    <div class="glassmorphism p-8 rounded-xl shadow-xl space-y-4">
+                        <p class="text-gray-300"><i class="fas fa-map-marker-alt fa-fw mr-3 text-accent-blue"></i>Jln. Sutera Barat, BINUS @ Alam Sutera</p>
+                        <p class="text-gray-300"><i class="fas fa-phone fa-fw mr-3 text-accent-blue"></i>+62 123 4567 8910</p>
+                        <p class="text-gray-300"><i class="fas fa-envelope fa-fw mr-3 text-accent-blue"></i>info@orionjets.com</p>
+                        <h3 class="text-xl font-semibold text-white pt-4">Business Hours</h3>
+                        <p class="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p class="text-gray-300">Saturday: 10:00 AM - 3:00 PM</p>
+                        <p class="text-gray-300">Sunday: Closed</p>
+                    </div>
+                    <div class="mt-8 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.306945664499!2d106.64645987586806!3d-6.223197460951291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb20a9906e13%3A0xf75c5296d0a385e4!2sBINUS%20%40Alam%20Sutera!5e0!3m2!1sen!2sid!4v1748086876904!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office Location Map"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Orion<span class="text-accent-blue">Jets</span></h4>
+                    <p class="text-gray-400 text-sm">Elevating your aviation experience with bespoke aircraft solutions for the Indonesian market and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent-blue text-sm">Home</a></li>
+                        <li><a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue text-sm">Aircraft Sales</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent-blue text-sm">Our Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent-blue text-sm">About Orion Jets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent-blue text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in luxury aviation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> Orion Jets. All Rights Reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed with passion for the skies.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const subjectFromUrl = params.get('subject');
+            const subjectInput = document.getElementById('subject');
+            if (subjectFromUrl && subjectInput) {
+                subjectInput.value = subjectFromUrl;
+            }
+
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('formSubmissionSuccess');
+
+            if (contactForm && successMessage) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+
+                    if (name && email && subject && message) {
+                        // In a real application, you would send the data to a server here.
+                        // For this example, we'll just show the success message.
+                        console.log('Form submitted:', { name, email, subject, message });
+                        
+                        successMessage.style.display = 'block';
+                        contactForm.reset(); 
+
+                        // Optional: Hide the message after a few seconds
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000); // Hide after 5 seconds
+                    } else {
+                        // Basic validation feedback (though 'required' attribute handles most)
+                        // You could add more sophisticated client-side validation here
+                        console.log('Form validation failed. Please fill all fields.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

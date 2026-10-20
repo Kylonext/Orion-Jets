@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Aircraft Details - Orion Jets</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-deep-space-blue text-light-gray">
+
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p class="preloader-text">LOADING AIRCRAFT DETAILS...</p>
+    </div>
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-white">
+                Orion<span class="text-accent-blue">Jets</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="nav-item text-gray-300">Home</a>
+                <a href="aircraft_listings.html" class="nav-item text-gray-300 active">Aircraft</a> 
+                <a href="about.html" class="nav-item text-gray-300">About Us</a>
+                <a href="services.html" class="nav-item text-gray-300">Services</a>
+                <a href="blog.html" class="nav-item text-gray-300">Blog</a>
+                <a href="contact.html" class="nav-item text-gray-300">Contact</a>
+                 <a href="aircraft_listings.html" class="btn-secondary px-5 py-2 rounded-lg text-sm font-semibold">Find Your Jet</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+         <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <a href="index.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light bg-gray-700">Aircraft</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="blog.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Blog</a>
+            <a href="contact.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Contact</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light hover:bg-gray-700">Find Your Jet</a>
+        </div>
+    </nav>
+
+    <section id="aircraft-details" class="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div class="container mx-auto px-6">
+            <nav class="text-sm mb-8 scroll-animation" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center">
+                        <a href="index.html" class="text-gray-400 hover:text-accent-blue">Home</a>
+                        <i class="fas fa-chevron-right mx-2 text-xs text-gray-500"></i>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue">Aircraft Fleet</a>
+                        <i class="fas fa-chevron-right mx-2 text-xs text-gray-500"></i>
+                    </li>
+                    <li class="flex items-center">
+                        <span class="text-white" id="aircraft-breadcrumb-name">Featured Aircraft</span> 
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="grid lg:grid-cols-5 gap-10 md:gap-12">
+                <div class="lg:col-span-3 scroll-animation" style="transition-delay: 0.1s;">
+                    
+                    <div id="static-image-gallery" class="glassmorphism rounded-xl p-2 shadow-xl">
+                        <div class="mb-4">
+                            
+                        </div>
+                        <div id="thumbnail-gallery" class="grid grid-cols-4 gap-2">
+                            <img src="YOUR_IMAGE_FOLDER/jet_exterior_view_thumb.jpg" alt="Thumbnail 1" class="static-thumb rounded-md w-full h-auto object-cover aspect-square cursor-pointer opacity-70 hover:opacity-100 border-2 border-transparent hover:border-accent-blue" onclick="document.getElementById('main-detail-image').src='YOUR_IMAGE_FOLDER/jet_exterior_view.jpg'">
+                            <img src="YOUR_IMAGE_FOLDER/jet_cabin_view_thumb.jpg" alt="Thumbnail 2" class="static-thumb rounded-md w-full h-auto object-cover aspect-square cursor-pointer opacity-70 hover:opacity-100 border-2 border-transparent hover:border-accent-blue" onclick="document.getElementById('main-detail-image').src='YOUR_IMAGE_FOLDER/jet_cabin_view.jpg'">
+                            <img src="YOUR_IMAGE_FOLDER/jet_cockpit_view_thumb.jpg" alt="Thumbnail 3" class="static-thumb rounded-md w-full h-auto object-cover aspect-square cursor-pointer opacity-70 hover:opacity-100 border-2 border-transparent hover:border-accent-blue" onclick="document.getElementById('main-detail-image').src='YOUR_IMAGE_FOLDER/jet_cockpit_view.jpg'">
+                            <img src="YOUR_IMAGE_FOLDER/jet_detail_shot_thumb.jpg" alt="Thumbnail 4" class="static-thumb rounded-md w-full h-auto object-cover aspect-square cursor-pointer opacity-70 hover:opacity-100 border-2 border-transparent hover:border-accent-blue" onclick="document.getElementById('main-detail-image').src='YOUR_IMAGE_FOLDER/jet_detail_shot.jpg'">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-2 scroll-animation" style="transition-delay: 0.2s;">
+                    <div class="glassmorphism p-6 md:p-8 rounded-xl shadow-xl">
+                        <h1 id="aircraft-title" class="text-3xl md:text-4xl font-bold text-white mb-3">Luxury Executive Jet</h1> 
+                        <p id="aircraft-short-desc" class="text-accent-blue-light text-lg mb-6">Experience unparalleled comfort and performance.</p> 
+
+                        <div class="mb-6">
+                            <span class="text-3xl font-bold text-white" id="aircraft-price">Contact for Price</span> 
+                            <span class="text-gray-400 text-sm ml-2"> (Inquire for details)</span>
+                        </div>
+
+                        <div class="space-y-3 mb-8 text-gray-300">
+                            <p><i class="fas fa-users fa-fw mr-3 text-accent-blue"></i>Capacity: <span id="aircraft-capacity" class="font-semibold text-white">10-12 Passengers</span></p>
+                            <p><i class="fas fa-tachometer-alt fa-fw mr-3 text-accent-blue"></i>Max Speed: <span id="aircraft-speed" class="font-semibold text-white">Mach 0.85</span></p>
+                            <p><i class="fas fa-route fa-fw mr-3 text-accent-blue"></i>Range: <span id="aircraft-range" class="font-semibold text-white">4,500 NM</span></p>
+                            <p><i class="fas fa-calendar-alt fa-fw mr-3 text-accent-blue"></i>Year: <span id="aircraft-year" class="font-semibold text-white">2023 Model</span></p>
+                            <p><i class="fas fa-map-marker-alt fa-fw mr-3 text-accent-blue"></i>Location: <span id="aircraft-location" class="font-semibold text-white">Available Globally</span></p>
+                        </div>
+
+                        <a href="contact.html?subject=Inquiry%20about%20Featured%20Aircraft" id="inquiry-button" class="btn-primary w-full text-center block py-3 rounded-lg font-semibold text-lg mb-4">
+                            <i class="fas fa-envelope mr-2"></i>Inquire About This Aircraft
+                        </a>
+                        <button class="btn-secondary w-full text-center block py-3 rounded-lg font-semibold">
+                            <i class="fas fa-share-alt mr-2"></i>Share Listing
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 md:mt-16 scroll-animation" style="transition-delay: 0.3s;">
+                <div class="glassmorphism rounded-xl shadow-xl p-1">
+                    <div class="flex border-b border-gray-700" id="tabs-container">
+                        <button data-tab="specifications" class="tab-button active">Specifications</button>
+                        <button data-tab="features" class="tab-button">Features & Amenities</button>
+                        <button data-tab="layout" class="tab-button">Cabin Layout</button>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <div id="specifications-content" class="tab-content active">
+                            <h3 class="text-2xl font-semibold text-white mb-6">Detailed Specifications</h3>
+                            <div class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-gray-300" id="specs-list">
+                                <p><strong>Manufacturer:</strong> <span>Leading Aircraft Corp.</span></p>
+                                <p><strong>Model:</strong> <span>Executive SkyLiner X</span></p>
+                                <p><strong>Serial Number:</strong> <span>Contact for details</span></p>
+                                <p><strong>Total Time (Hours):</strong> <span>Low</span></p>
+                                <p><strong>Engines:</strong> <span>Twin AeroPower XT5000</span></p>
+                                <p><strong>Avionics:</strong> <span>NextGen Flight Deck Pro</span></p>
+                                <p><strong>Max Takeoff Weight:</strong> <span>55,000 lbs</span></p>
+                                <p><strong>Fuel Capacity:</strong> <span>20,000 lbs</span></p>
+                            </div>
+                        </div>
+                        <div id="features-content" class="tab-content hidden">
+                            <h3 class="text-2xl font-semibold text-white mb-6">Features & Amenities</h3>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2" id="features-list">
+                                <li>Plush leather seating with custom configurations</li>
+                                <li>State-of-the-art entertainment system</li>
+                                <li>Full-service galley with premium appliances</li>
+                                <li>High-speed global Wi-Fi connectivity</li>
+                                <li>Spacious forward and aft lavatories</li>
+                                <li>Advanced cabin management system</li>
+                                <li>Ambient LED lighting</li>
+                            </ul>
+                        </div>
+                        <div id="layout-content" class="tab-content hidden">
+                            <h3 class="text-2xl font-semibold text-white mb-6">Cabin Layout</h3>
+                            <p class="text-gray-300 mb-4">Illustrative cabin layout. Actual configuration may vary.</p>
+                            <img src="YOUR_IMAGE_FOLDER/jet_layout_diagram.jpg" alt="Cabin Layout" id="cabin-layout-image" class="w-full max-w-2xl mx-auto rounded-lg shadow-md" onerror="this.onerror=null;this.src='https://placehold.co/800x400/111827/FF0000?text=LAYOUT+IMAGE+ERROR';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="related-aircraft" class="py-16 md:py-20 bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-12 text-white scroll-animation">You Might Also Like</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                <div class="glassmorphism rounded-xl overflow-hidden shadow-2xl card-hover-effect scroll-animation flex flex-col" style="transition-delay: 0.1s;">
+                    <img src="images/plane2.jpg" alt="Related Jet 1" class="w-full h-56 md:h-64 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Gulfstream G650ER</h3>
+                        <p class="text-accent-blue-light font-medium mb-2">Similar Performance</p>
+                        <p class="text-gray-400 mb-4 text-sm">Range: 6,000 NM | Capacity: 12</p>
+                    </div>
+                     <div class="p-6 pt-0">
+                        <a href="aircraft_detail.html" class="btn-secondary w-full text-center block py-2 rounded-lg font-semibold">View Details</a>
+                    </div>
+                </div>
+                 <div class="glassmorphism rounded-xl overflow-hidden shadow-2xl card-hover-effect scroll-animation flex flex-col" style="transition-delay: 0.2s;">
+                    <img src="images/plane3.jpg" alt="Related Jet 2" class="w-full h-56 md:h-64 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Gulfstream G700</h3>
+                        <p class="text-accent-blue-light font-medium mb-2">Unmatched Comfort</p>
+                        <p class="text-gray-400 mb-4 text-sm">Range: 5,500 NM | Capacity: 10</p>
+                    </div>
+                     <div class="p-6 pt-0">
+                        <a href="aircraft_detail.html" class="btn-secondary w-full text-center block py-2 rounded-lg font-semibold">View Details</a>
+                    </div>
+                </div>
+                 <div class="glassmorphism rounded-xl overflow-hidden shadow-2xl card-hover-effect scroll-animation flex flex-col" style="transition-delay: 0.3s;">
+                    <img src="images/plane4.jpg" alt="Related Jet 3" class="w-full h-56 md:h-64 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Bombardier Global 7500</h3>
+                        <p class="text-accent-blue-light font-medium mb-2">Peak Performance</p>
+                        <p class="text-gray-400 mb-4 text-sm">Range: 4,000 NM | Capacity: 8</p>
+                    </div>
+                     <div class="p-6 pt-0">
+                        <a href="aircraft_detail.html" class="btn-secondary w-full text-center block py-2 rounded-lg font-semibold">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+             <div class="grid md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Orion<span class="text-accent-blue">Jets</span></h4>
+                    <p class="text-gray-400 text-sm">Elevating your aviation experience with bespoke aircraft solutions for the Indonesian market and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent-blue text-sm">Home</a></li>
+                        <li><a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue text-sm">Aircraft Sales</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent-blue text-sm">Our Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent-blue text-sm">About Orion Jets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent-blue text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in luxury aviation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> Orion Jets. All Rights Reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed with passion for the skies.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script> 
+</body>
+</html>

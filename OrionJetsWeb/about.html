@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Orion Jets - Our Story and Mission</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-deep-space-blue text-light-gray">
+    <div id="preloader"><div class="spinner"></div><p class="preloader-text">LOADING...</p></div>
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-white">Orion<span class="text-accent-blue">Jets</span></a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="nav-item text-gray-300">Home</a>
+                <a href="aircraft_listings.html" class="nav-item text-gray-300">Aircraft</a>
+                <a href="about.html" class="nav-item text-gray-300 active">About Us</a>
+                <a href="services.html" class="nav-item text-gray-300">Services</a>
+                <a href="blog.html" class="nav-item text-gray-300">Blog</a>
+                <a href="contact.html" class="nav-item text-gray-300">Contact</a>
+                <a href="aircraft_listings.html" class="btn-secondary px-5 py-2 rounded-lg text-sm font-semibold">Find Your Jet</a>
+            </div>
+            <div class="md:hidden"><button id="mobile-menu-button" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <a href="index.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Aircraft</a>
+            <a href="about.html" class="block py-3 px-6 text-accent-blue-light bg-gray-700">About Us</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="blog.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Blog</a>
+            <a href="contact.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Contact</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light hover:bg-gray-700">Find Your Jet</a>
+        </div>
+    </nav>
+
+    <header class="page-header-section pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-900 text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 hero-text-animate h1">About Orion Jets</h1>
+            <p class="text-lg md:text-xl text-gray-300 hero-text-animate p">Pioneering Excellence in Aviation for Indonesia and Beyond.</p>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <section class="mb-16 scroll-animation">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="section-title text-3xl md:text-4xl font-bold text-white mb-6">Our Genesis</h2>
+                        <p class="text-gray-300 leading-relaxed mb-4">
+                            Orion Jets was founded with a singular vision: to revolutionize the aircraft acquisition experience in Indonesia. Recognizing the burgeoning potential and unique demands of the Southeast Asian market, we embarked on a mission to bridge the gap between global aircraft availability and local accessibility. Our journey began by meticulously curating data from premier international aircraft marketplaces, adapting and enhancing this information to serve the specific needs of Indonesian clientele.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed">
+                            We are more than just brokers; we are aviation enthusiasts and market experts dedicated to providing transparent, efficient, and personalized service. Our foundation is built on integrity, deep industry knowledge, and an unwavering commitment to our clients' success.
+                        </p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-2xl glassmorphism">
+                        <img src="images/plane1.jpg" alt="Orion Jets Vision" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16 py-12 bg-slate-900 rounded-xl scroll-animation" style="transition-delay: 0.1s;">
+                <div class="px-6">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-white text-center mb-10">Our Mission & Values</h2>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="glassmorphism p-8 rounded-xl card-hover-effect--subtle">
+                            <i class="fas fa-rocket text-5xl text-accent-blue mb-4"></i>
+                            <h3 class="text-2xl font-semibold mb-2 text-white">Client-Centricity</h3>
+                            <p class="text-gray-400">To empower our clients by simplifying the complex process of aircraft acquisition, offering tailored solutions and unparalleled support to ensure their ideal aviation goals are met with ease and confidence.</p>
+                        </div>
+                        <div class="glassmorphism p-8 rounded-xl card-hover-effect--subtle">
+                            <i class="fas fa-shield-alt text-5xl text-accent-blue mb-4"></i>
+                            <h3 class="text-2xl font-semibold mb-2 text-white">Integrity & Transparency</h3>
+                            <p class="text-gray-400">To conduct every transaction with the utmost integrity, providing clear, honest communication and complete transparency throughout the buying or selling journey.</p>
+                        </div>
+                        <div class="glassmorphism p-8 rounded-xl card-hover-effect--subtle">
+                            <i class="fas fa-lightbulb text-5xl text-accent-blue mb-4"></i>
+                            <h3 class="text-2xl font-semibold mb-2 text-white">Innovation & Expertise</h3>
+                            <p class="text-gray-400">To continuously innovate our services and leverage deep market expertise, ensuring our clients benefit from the most advanced search tools and comprehensive global insights.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16 scroll-animation" style="transition-delay: 0.2s;">
+                <h2 class="section-title text-3xl md:text-4xl font-bold text-white text-center mb-12">Meet Our Founders</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                    <div class="glassmorphism p-6 rounded-xl text-center card-hover-effect">
+                        <img src="images/bryan.jpg" alt="CEO Portrait" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent-blue object-cover">
+                        <h3 class="text-xl font-semibold text-white">Bryan Felix Ong</h3>
+                        <p class="text-accent-blue-light mb-1">Founder & CEO</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Visionary leader with 20+ years in aviation, passionate about connecting Indonesia to global skies.</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl text-center card-hover-effect">
+                        <img src="images/jeremy.jpg" alt="COO Portrait" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent-blue object-cover">
+                        <h3 class="text-xl font-semibold text-white">Jeremy Evan</h3>
+                        <p class="text-accent-blue-light mb-1">Chief Operations Officer</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Ensures operational excellence, streamlining processes for a seamless client experience.</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl text-center card-hover-effect">
+                        <img src="images/janssen.jpg" alt="Sales Director Portrait" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent-blue object-cover">
+                        <h3 class="text-xl font-semibold text-white">Janssen</h3>
+                        <p class="text-accent-blue-light mb-1">Director of Sales</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Leads our dynamic sales team, leveraging market knowledge to match clients with ideal aircraft.</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl text-center card-hover-effect">
+                        <img src="images/philip.jpg" alt="Tech Lead Portrait" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent-blue object-cover">
+                        <h3 class="text-xl font-semibold text-white">Philips Gunawan</h3>
+                        <p class="text-accent-blue-light mb-1">Head of Technology</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Drives technological innovation, enhancing our platform and search capabilities for users.</p>
+                    </div>
+                    <div class="glassmorphism p-6 rounded-xl text-center card-hover-effect">
+                        <img src="images/tommy.jpg" alt="Marketing Head Portrait" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent-blue object-cover">
+                        <h3 class="text-xl font-semibold text-white">Tommy Andreas Sinaga</h3>
+                        <p class="text-accent-blue-light mb-1">Marketing Director</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Shapes Orion Jets' brand presence and communicates our unique value to the Indonesian market.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scroll-animation bg-accent-blue-dark py-12 px-6 md:px-10 rounded-xl text-center" style="transition-delay: 0.3s;">
+                <h2 class="text-3xl font-bold text-white mb-6">Why Partner with Orion Jets?</h2>
+                <div class="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-check-circle text-2xl text-green-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Unmatched Indonesian Market Focus</h4>
+                            <p class="text-gray-300 text-sm">Tailored expertise and understanding of local regulations, preferences, and opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-check-circle text-2xl text-green-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Extensive Global Network</h4>
+                            <p class="text-gray-300 text-sm">Access to a vast inventory of on-market and off-market aircraft worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-check-circle text-2xl text-green-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Advanced Search Technology</h4>
+                            <p class="text-gray-300 text-sm">User-friendly platform with powerful filters to find your ideal aircraft quickly and efficiently.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-check-circle text-2xl text-green-400 mt-1"></i>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">End-to-End Support</h4>
+                            <p class="text-gray-300 text-sm">Comprehensive assistance from initial inquiry through to acquisition, delivery, and beyond.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn-primary inline-block mt-10 px-8 py-3 text-lg rounded-lg font-semibold">Speak With An Expert</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Orion<span class="text-accent-blue">Jets</span></h4>
+                    <p class="text-gray-400 text-sm">Elevating your aviation experience with bespoke aircraft solutions for the Indonesian market and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent-blue text-sm">Home</a></li>
+                        <li><a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue text-sm">Aircraft Sales</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent-blue text-sm">Our Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent-blue text-sm">About Orion Jets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent-blue text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in luxury aviation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; <span id="currentYear"></span> Orion Jets. All Rights Reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed with passion for the skies.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

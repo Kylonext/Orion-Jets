@@ -1,0 +1,354 @@
+/* style.css - Shared custom styles for Orion Jets */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0f1f; /* Deep space blue */
+    color: #e0e0e0; /* Light grey for text */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Color Palette (Tailwind classes preferred, but these can be fallbacks or for specific overrides) */
+:root {
+    --deep-space-blue: #0a0f1f;
+    --slate-900: #111827; /* Slightly lighter dark blue */
+    --light-gray: #e0e0e0;
+    --accent-blue: #3b82f6; /* Tailwind blue-500 */
+    --accent-blue-light: #60a5fa; /* Tailwind blue-400 */
+    --accent-blue-dark: #1e40af; /* Tailwind blue-800 for darker sections */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Preloader Styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--deep-space-blue);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.7s ease-out, visibility 0.7s ease-out;
+    visibility: visible;
+    opacity: 1;
+}
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top-color: var(--accent-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.preloader-text {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--light-gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navbar Styles */
+#navbar.scrolled { /* JS will add this class */
+    background: rgba(17, 24, 39, 0.85); /* bg-gray-800 with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+}
+.nav-item {
+    position: relative;
+    transition: color 0.3s ease;
+}
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-blue);
+    transition: width 0.3s ease-in-out;
+}
+.nav-item:hover::after,
+.nav-item.active::after { /* Style for active link */
+    width: 100%;
+}
+.nav-item:hover,
+.nav-item.active {
+    color: var(--accent-blue-light);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    min-height: 600px; /* Ensure visibility on smaller viewports */
+    background: linear-gradient(rgba(10, 15, 31, 0.75), rgba(10, 15, 31, 0.95)), url('https://placehold.co/1920x1080/0a0f1f/3b82f6?text=Orion+Jets+Skyline') no-repeat center center/cover;
+}
+.hero-text-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+.hero-text-animate.h1 { animation-delay: 0.5s; }
+.hero-text-animate.p { animation-delay: 0.8s; }
+.hero-text-animate.btn { animation-delay: 1.1s; }
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page Header (for subpages) */
+.page-header-section {
+    background: linear-gradient(rgba(10, 15, 31, 0.7), rgba(10, 15, 31, 0.9)), url('https://placehold.co/1920x400/0a0f1f/2563eb?text=Orion+Jets+Interior') no-repeat center center/cover;
+}
+
+
+/* Glassmorphism & Cards */
+.glassmorphism {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+.card-hover-effect {
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-hover-effect:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px -10px rgba(59, 130, 246, 0.25), 0 10px 15px -8px rgba(59, 130, 246, 0.15);
+}
+.card-hover-effect--subtle:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px -8px rgba(59, 130, 246, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.btn-primary:hover {
+    background-color: #2563eb; /* Tailwind blue-600 */
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 7px 14px rgba(59,130,246,0.3), 0 3px 6px rgba(0,0,0,0.08);
+}
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue-light);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: var(--accent-blue);
+    color: white;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 10px rgba(59,130,246,0.25);
+}
+.btn-secondary-white { /* For use on dark blue backgrounds */
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.btn-secondary-white:hover {
+    background-color: white;
+    color: var(--accent-blue-dark);
+    transform: translateY(-2px) scale(1.03);
+}
+
+
+/* Scroll Animations */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px; /* Space for the underline */
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px; /* Underline width */
+    height: 3px;
+    background-color: var(--accent-blue);
+    margin: 12px auto 0;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s; /* Added delay */
+    transform-origin: center;
+}
+.section-title.visible::after {
+    transform: scaleX(1);
+}
+
+/* Swiper Carousel Styles */
+.swiper-container {
+    width: 100%;
+    padding-top: 10px; /* Space for shadow */
+    padding-bottom: 50px; /* Space for pagination */
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Make slides equal height */
+    height: auto; /* Ensure content dictates height */
+}
+.swiper-slide .glassmorphism { /* Ensure cards in swiper take full height of slide */
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.7;
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active {
+    background: var(--accent-blue);
+    opacity: 1;
+    transform: scale(1.2);
+}
+.swiper-button-next, .swiper-button-prev {
+    color: var(--accent-blue-light) !important; /* Important to override default */
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    width: 44px !important;
+    height: 44px !important;
+    transition: background-color 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+}
+
+/* Aircraft Detail Page Specifics */
+.aircraft-gallery-swiper .swiper-pagination {
+    bottom: 10px !important;
+}
+.gallery-nav-button {
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+.thumbnail-item {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.thumbnail-item.active, .thumbnail-item:hover {
+    border-color: var(--accent-blue);
+    opacity: 1 !important;
+}
+
+/* Tabs for Aircraft Details */
+.tab-button {
+    padding: 0.75rem 1.5rem; /* py-3 px-6 */
+    font-weight: 500; /* medium */
+    color: var(--light-gray);
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    opacity: 0.7;
+}
+.tab-button:hover {
+    color: var(--accent-blue-light);
+    opacity: 1;
+}
+.tab-button.active {
+    color: var(--accent-blue-light);
+    border-bottom-color: var(--accent-blue);
+    opacity: 1;
+}
+.tab-content {
+  
+}
+
+/* Filter and Pagination Styles for Listings Page */
+.filter-select {
+    width: 100%;
+    background-color: #1f2937; /* bg-gray-700 */
+    border: 1px solid #374151; /* border-gray-600 */
+    color: white;
+    padding: 0.75rem; /* p-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+}
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 2px var(--accent-blue-light);
+}
+
+.pagination-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem; /* py-2 px-4 */
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--light-gray);
+    background-color: #1f2937; /* bg-gray-700 */
+    border: 1px solid #374151; /* border-gray-600 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.pagination-link:hover {
+    background-color: #374151; /* bg-gray-600 */
+    color: white;
+}
+.pagination-link.active-page {
+    background-color: var(--accent-blue);
+    color: white;
+    border-color: var(--accent-blue);
+    z-index: 10;
+}
+.pagination-link:first-child {
+    border-top-left-radius: 0.5rem; /* rounded-l-lg */
+    border-bottom-left-radius: 0.5rem;
+}
+.pagination-link:last-child {
+    border-top-right-radius: 0.5rem; /* rounded-r-lg */
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* Footer adjustments */
+footer a:hover {
+    color: var(--accent-blue-light);
+}
+
+/* Utility for aspect ratio if needed (Tailwind has aspect-ratio plugin but might not be default in CDN) */
+.aspect-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+}
+.aspect-video > img,
+.aspect-video > iframe,
+.aspect-video > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images cover the area */
+}

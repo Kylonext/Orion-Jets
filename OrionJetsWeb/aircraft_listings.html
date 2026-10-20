@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Listings - Orion Jets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-deep-space-blue text-light-gray">
+
+    <div id="preloader">
+        <div class="spinner"></div>
+        <p class="preloader-text">LOADING FLEET...</p>
+    </div>
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 glassmorphism shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-bold text-white">
+                Orion<span class="text-accent-blue">Jets</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="nav-item text-gray-300">Home</a>
+                <a href="aircraft_listings.html" class="nav-item text-gray-300 active">Aircraft</a>
+                <a href="about.html" class="nav-item text-gray-300">About Us</a>
+                <a href="services.html" class="nav-item text-gray-300">Services</a>
+                <a href="blog.html" class="nav-item text-gray-300">Blog</a>
+                <a href="contact.html" class="nav-item text-gray-300">Contact</a>
+                 <a href="aircraft_listings.html" class="btn-secondary px-5 py-2 rounded-lg text-sm font-semibold">Find Your Jet</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <a href="index.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light bg-gray-700">Aircraft</a>
+            <a href="about.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="services.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Services</a>
+            <a href="blog.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Blog</a>
+            <a href="contact.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Contact</a>
+            <a href="faq.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">FAQ</a>
+            <a href="careers.html" class="block py-3 px-6 text-gray-300 hover:bg-gray-700">Careers</a>
+            <a href="aircraft_listings.html" class="block py-3 px-6 text-accent-blue-light hover:bg-gray-700">Find Your Jet</a>
+        </div>
+    </nav>
+
+    <header class="page-header-section pt-32 pb-16 md:pt-40 md:pb-24 bg-slate-900 text-center relative">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 hero-text-animate h1">Our Exclusive Fleet</h1>
+            <p class="text-lg md:text-xl text-gray-300 hero-text-animate p">Browse our curated selection of premium aircraft.</p>
+        </div>
+    </header>
+
+    <section id="listings" class="py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="mb-12 p-6 md:p-8 glassmorphism rounded-xl shadow-lg scroll-animation">
+                <h3 class="text-2xl font-semibold text-white mb-6">Filter Aircraft</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+                    <div>
+                        <label for="filter-manufacturer" class="block text-sm font-medium text-gray-300 mb-1">Manufacturer</label>
+                        <select id="filter-manufacturer" class="filter-select">
+                            <option value="all">All Manufacturers</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="filter-price-range" class="block text-sm font-medium text-gray-300 mb-1">Price Range</label>
+                        <select id="filter-price-range" class="filter-select">
+                            <option value="all">Any Price</option>
+                            <option value="0-5000000">$1M - $5M</option>
+                            <option value="5000001-15000000">$5M - $15M</option>
+                            <option value="15000001-30000000">$15M - $30M</option>
+                            <option value="30000001-999999999">$30M+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="filter-capacity" class="block text-sm font-medium text-gray-300 mb-1">Passenger Capacity</label>
+                        <select id="filter-capacity" class="filter-select">
+                            <option value="all">Any Capacity</option>
+                            <option value="1-6">1-6 Passengers</option>
+                            <option value="7-12">7-12 Passengers</option>
+                            <option value="13-99">13+ Passengers</option>
+                        </select>
+                    </div>
+                    <button id="apply-filters-button" class="btn-primary py-3 rounded-lg font-semibold text-lg h-full mt-4 md:mt-0 w-full">
+                        <i class="fas fa-filter mr-2"></i>Apply Filters
+                    </button>
+                </div>
+            </div>
+
+            <div id="aircraft-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            </div>
+
+            <div id="no-results-message" class="hidden text-center text-gray-400 text-xl py-10 glassmorphism rounded-xl mt-10">
+                <i class="fas fa-plane-slash text-4xl mb-4 text-accent-blue"></i>
+                <p>No aircraft match your current filter criteria. Please try adjusting your search.</p>
+            </div>
+
+            <div id="pagination-container" class="mt-16 text-center scroll-animation" style="transition-delay: 0.5s;">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 py-10 text-center border-t border-gray-800">
+        <div class="container mx-auto px-6">
+             <div class="grid md:grid-cols-3 gap-8 mb-8 text-left">
+                <div>
+                    <h4 class="text-xl font-semibold text-white mb-4">Orion<span class="text-accent-blue">Jets</span></h4>
+                    <p class="text-gray-400 text-sm">Elevating your aviation experience with bespoke aircraft solutions for the Indonesian market and beyond.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent-blue text-sm">Home</a></li>
+                        <li><a href="aircraft_listings.html" class="text-gray-400 hover:text-accent-blue text-sm">Aircraft Sales</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent-blue text-sm">Our Services</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent-blue text-sm">About Orion Jets</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent-blue text-sm">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Connect With Us</h4>
+                    <p class="text-gray-400 text-sm mb-3">Stay updated with the latest in luxury aviation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-accent-blue transition-colors duration-300 text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-gray-500 text-sm">© <span id="currentYear"></span> Orion Jets. All Rights Reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed with passion for the skies.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
